@@ -22,16 +22,16 @@ Monatliche Auswertungen und Statistiken – Gesamtausgaben/-einnahmen, Top 3 Kat
 
 Automatisches Speichern und Laden der Daten in JSON-Dateien (data.json und budgets.json)
 
-Installation
+## Installation
 
 Python 3.x installieren
 
-Erforderliche Pakete installieren:
+## Erforderliche Pakete installieren:
 
 pip install matplotlib
 
 
-Programm starten:
+## Programm starten:
 
 python Cash_Flow_Budget.py
 
@@ -42,7 +42,7 @@ Cash_Flow_Budget/
 ├── budgets.json              # Gespeicherte Budgetlimits
 ├── README.md                 # Projektdokumentation
 
-Benutzeranleitung
+## Benutzeranleitung
 
 Einnahmen oder Ausgaben eingeben, Betrag, Kategorie, Beschreibung und optionales Datum (YYYY-MM-DD) angeben
 
@@ -57,3 +57,4 @@ Wähle eine Option:
 5. Alle Transaktionen anzeigen
 13. Budget für eine Kategorie setzen
 14. Monatsauswertung anzeigen
+
