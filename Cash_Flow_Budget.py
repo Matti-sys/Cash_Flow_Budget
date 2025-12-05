@@ -82,6 +82,58 @@ def transaktion_hinzufuegen(betrag, kategorie, beschreibung, geplant=False, datu
     }
     transaktionen.append(transaktion)
     print("Transaktion wurde hinzugefügt!")
+def transaktionen_mit_index_anzeigen():
+        print("\n--- TRANSAKTIONEN MIT INDEX ---")
+        for i, t in enumerate(transaktionen):
+            status = "geplant" if t["geplant"] else "ausgeführt"
+            print(f"{i}: [{t['datum']}] | {t['betrag']:.2f} € | {t['kategorie']} | {t['beschreibung']} | ({status})")
+
+def transaktion_bearbeiten():
+    transaktionen_mit_index_anzeigen()
+    try:
+        index = int(input("Welche Transaktion bearbeiten? Index eingeben: "))
+        if index < 0 or index >= len(transaktionen):
+            print("Ungültiger Index!")
+            return
+
+        t = transaktionen[index]
+        print("\nAlte Werte ENTER lassen, um nicht zu ändern.")
+
+        neuer_betrag = input(f"Betrag [{t['betrag']}]: ")
+        neue_kategorie = input(f"Kategorie [{t['kategorie']}]: ")
+        neue_beschreibung = input(f"Beschreibung [{t['beschreibung']}]: ")
+        neues_datum = input(f"Datum [{t['datum']}] (YYYY-MM-DD): ")
+        
+        if neuer_betrag != "":
+            t["betrag"] = float(neuer_betrag)
+        if neue_kategorie != "":
+            t["kategorie"] = neue_kategorie
+        if neue_beschreibung != "":
+            t["beschreibung"] = neue_beschreibung
+        if neues_datum != "":
+            t["datum"] = neues_datum
+
+        print("Transaktion aktualisiert!")
+        speichere_daten()
+
+    except ValueError:
+        print("Ungültige Eingabe!")
+
+
+def transaktion_loeschen():
+    transaktionen_mit_index_anzeigen()
+    try:
+        index = int(input("Welche Transaktion löschen? Index eingeben: "))
+        if index < 0 or index >= len(transaktionen):
+            print("Ungültiger Index!")
+            return
+        geloescht = transaktionen.pop(index)
+        print(f"Transaktion gelöscht: {geloescht}")
+        speichere_daten()
+    except ValueError:
+        print("Ungültige Eingabe!")
+
+
 
 # =========================================================
 # KONTOSTAND BERECHNEN
@@ -233,6 +285,8 @@ Benutzeranleitung:
         print("12. Speichern & Beenden")
         print("13. Budget setzen")
         print("14. Monatsauswertung anzeigen")
+        print("15. Transaktion bearbeiten")
+        print("16. Transaktion löschen")
 
         auswahl = input("Deine Auswahl: ")
 
@@ -281,6 +335,10 @@ Benutzeranleitung:
             jahr = int(jahr) if jahr else None
             monat = int(monat) if monat else None
             monats_auswertung(jahr, monat)
+        elif auswahl == "15":
+            transaktion_bearbeiten()
+        elif auswahl == "16":
+            transaktion_loeschen()
         else:
             print("Ungültige Eingabe. Bitte erneut wählen.")
 
