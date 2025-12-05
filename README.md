@@ -35,12 +35,14 @@ pip install matplotlib
 
 python Cash_Flow_Budget.py
 
-Projektstruktur
+## Projektstruktur
+```
 Cash_Flow_Budget/
-├── Cash_Flow_Budget.py       # Hauptskript
-├── data.json                 # Gespeicherte Transaktionen
-├── budgets.json              # Gespeicherte Budgetlimits
-├── README.md                 # Projektdokumentation
+├── Cash_Flow_Budget.py     # Hauptskript
+├── data.json               # Gespeicherte Transaktionen
+├── budgets.json            # Gespeicherte Budgetlimits
+└── README.md               # Projektdokumentation
+```
 
 ## Benutzeranleitung
 
@@ -57,4 +59,5 @@ Wähle eine Option:
 5. Alle Transaktionen anzeigen
 13. Budget für eine Kategorie setzen
 14. Monatsauswertung anzeigen
+
 
