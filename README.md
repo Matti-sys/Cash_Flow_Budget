@@ -1,4 +1,4 @@
-Cash_Flow_Budget
+## Cash_Flow_Budget
 
 Cash_Flow_Budget ist ein einfaches, aber erweitertes Python-Programm zur Verwaltung von täglichen Einnahmen und Ausgaben. Das Projekt demonstriert grundlegende und fortgeschrittene Python-Kenntnisse wie Listen, Dictionaries, Funktionen, Schleifen, Fehlerbehandlung, Dateiverarbeitung und Datenvisualisierung.
 
@@ -61,6 +61,7 @@ Wähle eine Option:
 5. Alle Transaktionen anzeigen
 13. Budget für eine Kategorie setzen
 14. Monatsauswertung anzeigen
+
 
 
 
