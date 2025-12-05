@@ -4,23 +4,25 @@ Cash_Flow_Budget ist ein einfaches, aber erweitertes Python-Programm zur Verwalt
 
 Funktionen
 
-Hinzufügen von Einnahmen und Ausgaben (sofort oder geplant)
+- Hinzufügen von Einnahmen und Ausgaben (sofort oder geplant)
 
-Alle Transaktionen anzeigen und nach Kategorien filtern
+- Alle Transaktionen anzeigen und nach Kategorien filtern
 
-Transaktionen nach Beschreibung oder Kategorie suchen
+- Transaktionen nach Beschreibung oder Kategorie suchen
 
-Berechnung des aktuellen und voraussichtlichen Kontostands
+- Transaktionen bearbeiten (nachträglich ändern), sowie Transaktionen löschen.
 
-Export von Transaktionen in eine CSV-Datei
+- Berechnung des aktuellen und voraussichtlichen Kontostands
 
-Visualisierung des Kontostands als Liniendiagramm
+- Export von Transaktionen in eine CSV-Datei
 
-Budget pro Kategorie – Limits setzen und Warnungen bei Überschreitung
+- Visualisierung des Kontostands als Liniendiagramm
 
-Monatliche Auswertungen und Statistiken – Gesamtausgaben/-einnahmen, Top 3 Kategorien, durchschnittliche tägliche Ausgaben, Sparquote
+- Budget pro Kategorie – Limits setzen und Warnungen bei Überschreitung
 
-Automatisches Speichern und Laden der Daten in JSON-Dateien (data.json und budgets.json)
+- Monatliche Auswertungen und Statistiken – Gesamtausgaben/-einnahmen, Top 3 Kategorien, durchschnittliche tägliche Ausgaben, Sparquote
+
+- Automatisches Speichern und Laden der Daten in JSON-Dateien (data.json und budgets.json)
 
 ## Installation
 
@@ -59,5 +61,6 @@ Wähle eine Option:
 5. Alle Transaktionen anzeigen
 13. Budget für eine Kategorie setzen
 14. Monatsauswertung anzeigen
+
 
 
